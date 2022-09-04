@@ -1,0 +1,40 @@
+echo "enter the day"
+read folder
+
+mkdir solutions/$folder
+echo "creating folder and copying solution from eclipse directory"
+cp /Users/mdhariwal/Desktop/git-projects/MyProject/src/main/java/Solution.java solutions/$folder/
+
+echo "what is the name of the problem"
+
+read name
+
+echo "enter the url of the problem"
+
+read URL
+
+echo "what is the time complexity of the problem"
+
+read time_complexity
+
+echo "what was the space complexity"
+
+read space_complexity
+
+echo "how much time you took"
+
+read time_taken
+
+echo "how difficult was it"
+
+read difficulty
+
+echo "what was thing you learned here"
+
+read topic_learned
+
+echo "| $folder |[$name]($URL) |  [Solution](./$PROBLEMTYPE/$folder/Solution.java)   | $time_complexity | $space_complexity | $time_taken | $difficulty | $topic_learned " >> README.md
+
+commit="added new solution for $folder"
+git add .
+git commit -m "$commit"
